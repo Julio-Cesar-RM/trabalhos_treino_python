@@ -86,9 +86,9 @@
 #===========================================
 #docstrings: documentar coisas, como funções
 
-texto = '''
-Docstring é uma espécie de documentação que podemos inserir dentro de um módulo
-função ou classe em python, entre outros locais. 
-Respeita deslocamento do texto e é multilinhas.
-'''
-print(texto)
+# texto = '''
+# Docstring é uma espécie de documentação que podemos inserir dentro de um módulo
+# função ou classe em python, entre outros locais. 
+# Respeita deslocamento do texto e é multilinhas.
+# '''
+# print(texto)
