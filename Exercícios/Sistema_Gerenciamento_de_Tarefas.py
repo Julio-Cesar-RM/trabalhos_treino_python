@@ -7,8 +7,9 @@ while resposta != '6':
     print(' \033[31mDigite 2:\033[0m para vizualizar suas tarefas. ')
     print(' \033[31mDigite 3:\033[0m para editar uma tarefa. ')
     print(' \033[31mDigite 4:\033[0m para excluir uma tarefa. ')
-    print(' \033[31mDigite 5:\033[0m para excluir todas as tarefas.')
-    print(' \033[31mDigite 6:\033[0m para sair do programa. \n')
+    print(' \033[31mDigite 5:\033[0m para excluir todas as tarefas. ')
+    print(' \033[31mDigite 6:\033[0m para sair do programa. ')
+    print(' \033[31mDigite 7:\033[0m para carregar um dicionário já existente. \n')
 
     resposta = input('Digite: ')
 
@@ -83,4 +84,16 @@ while resposta != '6':
     elif resposta == '5':
         tarefas.clear()
 
+    elif resposta == '7':
+        with open("dados.txt", "r") as arquivo:
+            for linha in arquivo:
+                chave, valor = linha.strip().split(": ", 1)
+                tarefas[chave] = valor
+
+    else:
+        print('\n\033[38;5;214mDigite uma opção válida.\033[0m\n')
 print('\n\033[93mPrograma Encerrado!\033[0m')
+
+with open("dados.txt", "w") as arquivo:
+    for chave, valor in tarefas.items():
+        arquivo.write(f"{chave}: {valor}\n")

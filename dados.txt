@@ -1,0 +1,2 @@
+acordar: eu acordo
+estudar: eu estudo
